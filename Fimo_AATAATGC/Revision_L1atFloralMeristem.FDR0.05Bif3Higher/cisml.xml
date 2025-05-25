@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- Document definition -->
+<!-- http://zlab.bu.edu/~phaverty/SupplementalData/CisML/cisml.dtd -->
+<!DOCTYPE cis-element-search[
+<!ELEMENT cis-element-search (program-name, parameters, (pattern | multi-pattern-scan)*)>
+<!ELEMENT program-name (#PCDATA)>
+<!ELEMENT parameters (
+  pattern-file, 
+  sequence-file, 
+  background-seq-file?,
+  pattern-pvalue-cutoff?,
+  sequence-pvalue-cutoff?,
+  site-pvalue-cutoff?,
+  sequence-filtering,
+  ANY*
+ )>
+<!ELEMENT command-line (#PCDATA)>
+<!ELEMENT pattern-file (#PCDATA)>
+<!ELEMENT sequence-file (#PCDATA)>
+<!ELEMENT background-seq-file (#PCDATA)>
+<!ELEMENT pattern-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-pvalue-cutoff (#PCDATA)>
+<!ELEMENT site-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-filtering EMPTY>
+<!ELEMENT multi-pattern-scan (pattern+, ANY*)>
+<!ELEMENT pattern (scanned-sequence+, ANY*)>
+<!ELEMENT scanned-sequence (matched-element*, ANY*)>
+<!ELEMENT matched-element (sequence)>
+<!ELEMENT sequence (#PCDATA)>
+<!ATTLIST cis-element-search
+xmlns:xsi CDATA #IMPLIED
+xmlns:mem CDATA #IMPLIED
+xsi:schemaLocation CDATA #IMPLIED
+>
+<!ATTLIST sequence-filtering
+on-off CDATA #REQUIRED
+type CDATA #IMPLIED
+>
+<!ATTLIST multi-pattern-scan
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+>
+<!ATTLIST pattern
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+pvalue CDATA #IMPLIED
+score CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST scanned-sequence
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+length CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST matched-element
+start CDATA #REQUIRED
+stop CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+clusterid CDATA #IMPLIED
+>
+
+]>
+<cis-element-search
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://zlab.bu.edu/schema/cisml cisml.xsd"
+  xmlns="http://zlab.bu.edu/schema/cisml"
+  xmlns:mem="http://noble.gs.washington.edu/meme"
+>
+<program-name>fimo</program-name>
+<parameters>
+<command-line>fimo --o /scratch/sb14489/3.scATAC/2.Maize_ear/10.MotifAnalysis/3.fimo/Revision_L1atFloralMeristem.FDR0.05Bif3Higher /scratch/sb14489/3.scATAC/0.Data/Plant_Motif_PWM/CentralZone_TAAT.txt /scratch/sb14489/3.scATAC/2.Maize_ear/8.Comparative_Analysis/2.dACR/A619_vs_Bif3_AnnV4/L1atFloralMeristem.FDR0.05A619Higher.fasta</command-line>
+<pattern-file>/scratch/sb14489/3.scATAC/0.Data/Plant_Motif_PWM/CentralZone_TAAT.txt</pattern-file>
+<sequence-file>/scratch/sb14489/3.scATAC/2.Maize_ear/8.Comparative_Analysis/2.dACR/A619_vs_Bif3_AnnV4/L1atFloralMeristem.FDR0.05A619Higher.fasta</sequence-file>
+<site-pvalue-cutoff>0.0001</site-pvalue-cutoff>
+<sequence-filtering on-off="off"/>
+</parameters>
+<pattern accession="IMOCHigher" name="IM_OC_Bif3Higher_TAAT">
+<scanned-sequence accession="chr1:12487525-12488112" name="chr1:12487525-12488112">
+<matched-element start="244" stop="236" score="10.5595" pvalue="9.89e-05">
+<sequence>CAATTATGC</sequence>
+<mem:qvalue>0.638</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr1:12816167-12816669" name="chr1:12816167-12816669">
+</scanned-sequence>
+<scanned-sequence accession="chr1:12884052-12884555" name="chr1:12884052-12884555">
+</scanned-sequence>
+<scanned-sequence accession="chr1:16673861-16674362" name="chr1:16673861-16674362">
+</scanned-sequence>
+<scanned-sequence accession="chr1:192425245-192425746" name="chr1:192425245-192425746">
+</scanned-sequence>
+<scanned-sequence accession="chr1:192618790-192619337" name="chr1:192618790-192619337">
+</scanned-sequence>
+<scanned-sequence accession="chr1:21840214-21840908" name="chr1:21840214-21840908">
+</scanned-sequence>
+<scanned-sequence accession="chr1:256936956-256937544" name="chr1:256936956-256937544">
+</scanned-sequence>
+<scanned-sequence accession="chr1:262594969-262595471" name="chr1:262594969-262595471">
+</scanned-sequence>
+<scanned-sequence accession="chr1:26886594-26887124" name="chr1:26886594-26887124">
+</scanned-sequence>
+<scanned-sequence accession="chr1:301942893-301943397" name="chr1:301942893-301943397">
+</scanned-sequence>
+<scanned-sequence accession="chr1:39999822-40000615" name="chr1:39999822-40000615">
+<matched-element start="358" stop="366" score="14.0119" pvalue="1.58e-05">
+<sequence>CAATAATTC</sequence>
+<mem:qvalue>0.416</mem:qvalue>
+</matched-element>
+<matched-element start="263" stop="255" score="12.1905" pvalue="4.67e-05">
+<sequence>CAATCATTC</sequence>
+<mem:qvalue>0.565</mem:qvalue>
+</matched-element>
+<matched-element start="314" stop="322" score="11.7381" pvalue="6.49e-05">
+<sequence>TAATCATGC</sequence>
+<mem:qvalue>0.638</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr1:4544294-4544928" name="chr1:4544294-4544928">
+</scanned-sequence>
+<scanned-sequence accession="chr1:4623885-4624445" name="chr1:4623885-4624445">
+</scanned-sequence>
+<scanned-sequence accession="chr1:66571720-66572221" name="chr1:66571720-66572221">
+</scanned-sequence>
+<scanned-sequence accession="chr1:85957524-85958025" name="chr1:85957524-85958025">
+</scanned-sequence>
+<scanned-sequence accession="chr10:133454851-133455402" name="chr10:133454851-133455402">
+</scanned-sequence>
+<scanned-sequence accession="chr10:138637537-138638038" name="chr10:138637537-138638038">
+</scanned-sequence>
+<scanned-sequence accession="chr10:140128568-140129074" name="chr10:140128568-140129074">
+</scanned-sequence>
+<scanned-sequence accession="chr10:57794274-57794775" name="chr10:57794274-57794775">
+</scanned-sequence>
+<scanned-sequence accession="chr10:76188359-76188939" name="chr10:76188359-76188939">
+</scanned-sequence>
+<scanned-sequence accession="chr10:94246522-94247120" name="chr10:94246522-94247120">
+</scanned-sequence>
+<scanned-sequence accession="chr2:129288781-129289282" name="chr2:129288781-129289282">
+</scanned-sequence>
+<scanned-sequence accession="chr2:140390490-140390993" name="chr2:140390490-140390993">
+</scanned-sequence>
+<scanned-sequence accession="chr2:150765561-150766069" name="chr2:150765561-150766069">
+</scanned-sequence>
+<scanned-sequence accession="chr2:15681389-15681929" name="chr2:15681389-15681929">
+</scanned-sequence>
+<scanned-sequence accession="chr2:15765098-15765622" name="chr2:15765098-15765622">
+<matched-element start="380" stop="372" score="10.8214" pvalue="8.42e-05">
+<sequence>CAATAATTT</sequence>
+<mem:qvalue>0.638</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr2:167369940-167370441" name="chr2:167369940-167370441">
+</scanned-sequence>
+<scanned-sequence accession="chr2:183875072-183875598" name="chr2:183875072-183875598">
+</scanned-sequence>
+<scanned-sequence accession="chr2:193794682-193795183" name="chr2:193794682-193795183">
+</scanned-sequence>
+<scanned-sequence accession="chr2:209049835-209050346" name="chr2:209049835-209050346">
+</scanned-sequence>
+<scanned-sequence accession="chr2:229460478-229460980" name="chr2:229460478-229460980">
+</scanned-sequence>
+<scanned-sequence accession="chr2:241711335-241711843" name="chr2:241711335-241711843">
+</scanned-sequence>
+<scanned-sequence accession="chr2:86487294-86487795" name="chr2:86487294-86487795">
+</scanned-sequence>
+<scanned-sequence accession="chr2:88553659-88554212" name="chr2:88553659-88554212">
+</scanned-sequence>
+<scanned-sequence accession="chr3:128788282-128788785" name="chr3:128788282-128788785">
+</scanned-sequence>
+<scanned-sequence accession="chr3:142906626-142907131" name="chr3:142906626-142907131">
+</scanned-sequence>
+<scanned-sequence accession="chr3:164152165-164152666" name="chr3:164152165-164152666">
+</scanned-sequence>
+<scanned-sequence accession="chr3:181063102-181063603" name="chr3:181063102-181063603">
+</scanned-sequence>
+<scanned-sequence accession="chr3:188556885-188557775" name="chr3:188556885-188557775">
+<matched-element start="673" stop="681" score="10.7024" pvalue="9.4e-05">
+<sequence>CAATCATGT</sequence>
+<mem:qvalue>0.638</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr3:216524752-216525272" name="chr3:216524752-216525272">
+</scanned-sequence>
+<scanned-sequence accession="chr3:223722521-223723122" name="chr3:223722521-223723122">
+</scanned-sequence>
+<scanned-sequence accession="chr4:160655708-160656209" name="chr4:160655708-160656209">
+</scanned-sequence>
+<scanned-sequence accession="chr4:177665584-177666109" name="chr4:177665584-177666109">
+</scanned-sequence>
+<scanned-sequence accession="chr4:195985505-195986006" name="chr4:195985505-195986006">
+</scanned-sequence>
+<scanned-sequence accession="chr4:6447841-6448410" name="chr4:6447841-6448410">
+</scanned-sequence>
+<scanned-sequence accession="chr4:75579281-75579787" name="chr4:75579281-75579787">
+<matched-element start="470" stop="462" score="13.8929" pvalue="1.98e-05">
+<sequence>CAATCATGC</sequence>
+<mem:qvalue>0.416</mem:qvalue>
+</matched-element>
+<matched-element start="381" stop="373" score="12.5238" pvalue="3.18e-05">
+<sequence>CAATAATGT</sequence>
+<mem:qvalue>0.439</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr4:78228321-78228878" name="chr4:78228321-78228878">
+</scanned-sequence>
+<scanned-sequence accession="chr4:91161176-91161762" name="chr4:91161176-91161762">
+</scanned-sequence>
+<scanned-sequence accession="chr5:146734568-146735132" name="chr5:146734568-146735132">
+<matched-element start="101" stop="109" score="13.5595" pvalue="2.58e-05">
+<sequence>TAATAATGC</sequence>
+<mem:qvalue>0.416</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr5:182531251-182531793" name="chr5:182531251-182531793">
+</scanned-sequence>
+<scanned-sequence accession="chr5:187273778-187274279" name="chr5:187273778-187274279">
+</scanned-sequence>
+<scanned-sequence accession="chr5:208709861-208710743" name="chr5:208709861-208710743">
+</scanned-sequence>
+<scanned-sequence accession="chr5:20973693-20974320" name="chr5:20973693-20974320">
+</scanned-sequence>
+<scanned-sequence accession="chr5:210339174-210339758" name="chr5:210339174-210339758">
+<matched-element start="297" stop="305" score="11.1429" pvalue="6.89e-05">
+<sequence>CAATAGTGC</sequence>
+<mem:qvalue>0.638</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr5:212701680-212702181" name="chr5:212701680-212702181">
+</scanned-sequence>
+<scanned-sequence accession="chr5:225622353-225622880" name="chr5:225622353-225622880">
+</scanned-sequence>
+<scanned-sequence accession="chr5:3606244-3606753" name="chr5:3606244-3606753">
+</scanned-sequence>
+<scanned-sequence accession="chr5:95001748-95002315" name="chr5:95001748-95002315">
+<matched-element start="168" stop="176" score="10.5595" pvalue="9.89e-05">
+<sequence>CAATTATGC</sequence>
+<mem:qvalue>0.638</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr6:14745930-14746449" name="chr6:14745930-14746449">
+<matched-element start="160" stop="152" score="13.8929" pvalue="1.98e-05">
+<sequence>CAATCATGC</sequence>
+<mem:qvalue>0.416</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr6:151482267-151482779" name="chr6:151482267-151482779">
+</scanned-sequence>
+<scanned-sequence accession="chr6:159731975-159732508" name="chr6:159731975-159732508">
+</scanned-sequence>
+<scanned-sequence accession="chr6:170861086-170861587" name="chr6:170861086-170861587">
+</scanned-sequence>
+<scanned-sequence accession="chr6:171743808-171744309" name="chr6:171743808-171744309">
+</scanned-sequence>
+<scanned-sequence accession="chr6:173613113-173613617" name="chr6:173613113-173613617">
+</scanned-sequence>
+<scanned-sequence accession="chr6:21846239-21846744" name="chr6:21846239-21846744">
+</scanned-sequence>
+<scanned-sequence accession="chr6:41142141-41142642" name="chr6:41142141-41142642">
+<matched-element start="234" stop="242" score="10.9524" pvalue="7.29e-05">
+<sequence>CAATGATGC</sequence>
+<mem:qvalue>0.638</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr6:66078825-66079326" name="chr6:66078825-66079326">
+</scanned-sequence>
+<scanned-sequence accession="chr6:82287733-82288234" name="chr6:82287733-82288234">
+</scanned-sequence>
+<scanned-sequence accession="chr6:9572448-9572989" name="chr6:9572448-9572989">
+<matched-element start="358" stop="350" score="14.0119" pvalue="1.58e-05">
+<sequence>CAATAATTC</sequence>
+<mem:qvalue>0.416</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr7:125001916-125002550" name="chr7:125001916-125002550">
+</scanned-sequence>
+<scanned-sequence accession="chr7:134691489-134691990" name="chr7:134691489-134691990">
+</scanned-sequence>
+<scanned-sequence accession="chr7:156494342-156494843" name="chr7:156494342-156494843">
+</scanned-sequence>
+<scanned-sequence accession="chr7:159995876-159996401" name="chr7:159995876-159996401">
+</scanned-sequence>
+<scanned-sequence accession="chr7:161035968-161036537" name="chr7:161035968-161036537">
+<matched-element start="178" stop="186" score="13.5595" pvalue="2.58e-05">
+<sequence>TAATAATGC</sequence>
+<mem:qvalue>0.416</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="chr7:162718273-162718801" name="chr7:162718273-162718801">
+</scanned-sequence>
+<scanned-sequence accession="chr7:64226130-64226712" name="chr7:64226130-64226712">
+</scanned-sequence>
+<scanned-sequence accession="chr7:89542103-89542604" name="chr7:89542103-89542604">
+</scanned-sequence>
+<scanned-sequence accession="chr8:112615028-112615547" name="chr8:112615028-112615547">
+</scanned-sequence>
+<scanned-sequence accession="chr8:159102048-159102563" name="chr8:159102048-159102563">
+</scanned-sequence>
+<scanned-sequence accession="chr8:165170942-165171474" name="chr8:165170942-165171474">
+</scanned-sequence>
+<scanned-sequence accession="chr8:168847068-168847569" name="chr8:168847068-168847569">
+</scanned-sequence>
+<scanned-sequence accession="chr8:168849001-168849503" name="chr8:168849001-168849503">
+</scanned-sequence>
+<scanned-sequence accession="chr8:22452158-22452659" name="chr8:22452158-22452659">
+</scanned-sequence>
+<scanned-sequence accession="chr8:64915448-64915949" name="chr8:64915448-64915949">
+</scanned-sequence>
+<scanned-sequence accession="chr9:107270531-107271049" name="chr9:107270531-107271049">
+</scanned-sequence>
+<scanned-sequence accession="chr9:126549379-126549880" name="chr9:126549379-126549880">
+</scanned-sequence>
+<scanned-sequence accession="chr9:131193381-131193887" name="chr9:131193381-131193887">
+</scanned-sequence>
+<scanned-sequence accession="chr9:21495950-21496451" name="chr9:21495950-21496451">
+</scanned-sequence>
+<scanned-sequence accession="chr9:76143731-76144337" name="chr9:76143731-76144337">
+</scanned-sequence>
+<scanned-sequence accession="chr9:81742170-81742681" name="chr9:81742170-81742681">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+</cis-element-search>

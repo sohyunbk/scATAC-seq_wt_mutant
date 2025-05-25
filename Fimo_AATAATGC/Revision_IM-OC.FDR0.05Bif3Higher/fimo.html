@@ -1,0 +1,3977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:cis="http://zlab.bu.edu/schema/cisml" xmlns:fimo="http://noble.gs.washington.edu/schema/cisml" xmlns:mem="http://noble.gs.washington.edu/meme">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>FIMO Results</title>
+<style type="text/css">
+td.left {text-align: left;}
+td.right {text-align: right; padding-right: 1cm;}
+</style>
+</head>
+<body color="#000000">
+<a name="top_buttons"></a>
+<hr>
+<table summary="buttons" align="left" cellspacing="0">
+<tr>
+<td bgcolor="#00FFFF"><a href="#database_and_motifs"><b>Database and Motifs</b></a></td>
+<td bgcolor="#DDFFDD"><a href="#sec_i"><b>High-scoring Motif Occurences</b></a></td>
+<td bgcolor="#DDDDFF"><a href="#debugging_information"><b>Debugging Information</b></a></td>
+<td bgcolor="#FFDD00"><a href="fimo.tsv""><b>Results in TSV Format</b></a></td>
+<td bgcolor="#FFDDFF"><a href="fimo.gff""><b>Results in GFF3 Format</b></a></td>
+</tr>
+</table>
+<br/>
+<br/>
+<hr/>
+<center><big><b>FIMO - Motif search tool</b></big></center>
+<hr>
+<p>
+FIMO version 5.5.0, (Release date: Wed Sep 7 14:18:26 2022 -0700)
+</p>
+<p>
+For further information on how to interpret these results please access <a href="https://meme-suite.org/meme/doc/fimo-output-format.html">https://meme-suite.org/meme/doc/fimo-output-format.html</a>.<br>
+To get a copy of the FIMO software please access <a href="https://meme-suite.org">https://meme-suite.org</a>
+
+</p>
+<p>If you use FIMO in your research, please cite the following paper:<br>
+Charles E. Grant, Timothy L. Bailey, and William Stafford Noble,
+"FIMO: Scanning for occurrences of a given motif",
+<i>Bioinformatics</i>, <b>27</b>(7):1017-1018, 2011.
+<a href="http://bioinformatics.oxfordjournals.org/content/27/7/1017">[full text]</a></p>
+<hr>
+<center><big><b><a name="database_and_motifs">DATABASE AND MOTIFS</a></b></big></center>
+<hr>
+<div style="padding-left: 0.75in; line-height: 1em; font-family: monospace;">
+<p>
+  DATABASE /scratch/sb14489/3.scATAC/2.Maize_ear/8.Comparative_Analysis/2.dACR/A619_vs_Bif3_AnnV4/IM-OC.FDR0.05A619Higher.fasta
+  <br />
+  Database contains 1437 sequences, 800581 residues
+</p>
+<p>
+  MOTIFS /scratch/sb14489/3.scATAC/0.Data/Plant_Motif_PWM/CentralZone_TAAT.txt (DNA)
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom: 1px dashed;">MOTIF</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;">WIDTH</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;text-align:left;" >
+         BEST POSSIBLE MATCH
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:right;">IMOCHigher</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">CAATAATGC</td>
+       </tr>
+    </tbody>
+  </table>
+</p>
+<p>
+Random model letter frequencies (--nrdb--):
+<br/>
+
+A 0.275 C 0.225 G 0.225 T 0.275 </p>
+</div>
+<hr>
+<center><big><b><a name="sec_i">SECTION I: HIGH-SCORING MOTIF OCCURENCES</a></b></big></center>
+<hr>
+<ul>
+<li>
+There were 345 motif occurences with a p-value less than 0.0001.
+
+The full set of motif occurences can be seen in the
+TSV (tab-delimited values) output file
+<a href="fimo.tsv">fimo.tsv</a>, 
+the GFF3 file 
+<a href="fimo.gff">fimo.gff</a> 
+which may be suitable for uploading to the 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTables">UCSC Genome Table Browser</a>
+(assuming the FASTA input sequences included genomic coordinates in UCSC or Galaxy format),
+or the XML file 
+<a href="fimo.xml">fimo.xml</a>.
+</li>
+<li>
+The <i>p</i>-value of a motif occurrence is defined as the
+probability of a random sequence of the same length as the motif
+matching that position of the sequence with as good or better a score.
+</li>
+<li>
+The score for the match of a position in a sequence to a motif
+is computed by summing the appropriate entries from each column of
+the position-dependent scoring matrix that represents the motif.
+</li>
+<li>
+The q-value of a motif occurrence is defined as the
+false discovery rate if the occurrence is accepted as significant.
+</li>
+<li>The table is sorted by increasing <i>p</i>-value.</li>
+</ul>
+<table border="1">
+<thead>
+<tr>
+<th>Motif ID</th>
+<th>Alt ID</th>
+<th>Sequence Name</th>
+<th>Strand</th>
+<th>Start</th>
+<th>End</th>
+<th>p-value</th>
+<th>q-value</th>
+<th>Matched Sequence</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:152329060-152329658</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">65</td>
+      <td style="text-align:left;">73</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:150680526-150681200</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">107</td>
+      <td style="text-align:left;">115</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:204254547-204255242</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">107</td>
+      <td style="text-align:left;">115</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:34743688-34744202</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">159</td>
+      <td style="text-align:left;">167</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:126320812-126321329</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">192</td>
+      <td style="text-align:left;">200</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:185402247-185402748</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">226</td>
+      <td style="text-align:left;">234</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:212661069-212661623</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">254</td>
+      <td style="text-align:left;">262</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:170898284-170898788</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">276</td>
+      <td style="text-align:left;">284</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:43030194-43030695</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">299</td>
+      <td style="text-align:left;">307</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:152722202-152722703</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">307</td>
+      <td style="text-align:left;">315</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:25168445-25168984</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">314</td>
+      <td style="text-align:left;">322</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:150287007-150287585</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">321</td>
+      <td style="text-align:left;">329</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:159232061-159232653</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">326</td>
+      <td style="text-align:left;">334</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:130132748-130133249</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">349</td>
+      <td style="text-align:left;">357</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:96579151-96579718</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">350</td>
+      <td style="text-align:left;">358</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:6983872-6984410</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">352</td>
+      <td style="text-align:left;">360</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:87553856-87554357</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">362</td>
+      <td style="text-align:left;">370</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:77208136-77208743</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">376</td>
+      <td style="text-align:left;">384</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:76064545-76065046</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">409</td>
+      <td style="text-align:left;">417</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:159601907-159602411</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">413</td>
+      <td style="text-align:left;">421</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:168026225-168026776</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">540</td>
+      <td style="text-align:left;">548</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:5747290-5747903</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">563</td>
+      <td style="text-align:left;">571</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:134335161-134335957</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">623</td>
+      <td style="text-align:left;">631</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:29431832-29432426</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">92</td>
+      <td style="text-align:left;">100</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:173062251-173062752</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">109</td>
+      <td style="text-align:left;">117</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:87553856-87554357</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">114</td>
+      <td style="text-align:left;">122</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:130681436-130682012</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">124</td>
+      <td style="text-align:left;">132</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:181953091-181953619</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">131</td>
+      <td style="text-align:left;">139</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:108172074-108173025</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">162</td>
+      <td style="text-align:left;">170</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:14962227-14963129</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">181</td>
+      <td style="text-align:left;">189</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:146673042-146674273</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">185</td>
+      <td style="text-align:left;">193</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:4149715-4150258</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">233</td>
+      <td style="text-align:left;">241</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:227818759-227819261</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">277</td>
+      <td style="text-align:left;">285</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:120446255-120446756</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">284</td>
+      <td style="text-align:left;">292</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:43030194-43030695</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">316</td>
+      <td style="text-align:left;">324</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:152722202-152722703</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">329</td>
+      <td style="text-align:left;">337</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:112094421-112095178</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">358</td>
+      <td style="text-align:left;">366</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:58562905-58563431</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">384</td>
+      <td style="text-align:left;">392</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:73704141-73704746</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">505</td>
+      <td style="text-align:left;">513</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:138308419-138309122</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">578</td>
+      <td style="text-align:left;">586</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:231426775-231427606</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">623</td>
+      <td style="text-align:left;">631</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:200233797-200234839</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">635</td>
+      <td style="text-align:left;">643</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:274491305-274492432</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">746</td>
+      <td style="text-align:left;">754</td>
+      <td style="text-align:left;">4.91e-06</td>
+      <td style="text-align:left;">0.18</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:105417945-105418687</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">11</td>
+      <td style="text-align:left;">19</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:107413764-107414297</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">121</td>
+      <td style="text-align:left;">129</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:159468665-159469220</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">137</td>
+      <td style="text-align:left;">145</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:63477198-63478094</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">235</td>
+      <td style="text-align:left;">243</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:46213152-46213653</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">241</td>
+      <td style="text-align:left;">249</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:228935567-228936069</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">247</td>
+      <td style="text-align:left;">255</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:175423750-175424251</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">278</td>
+      <td style="text-align:left;">286</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:28594881-28595382</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">293</td>
+      <td style="text-align:left;">301</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:87048964-87049522</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">296</td>
+      <td style="text-align:left;">304</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:225540210-225540776</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">348</td>
+      <td style="text-align:left;">356</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:110116033-110116534</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">352</td>
+      <td style="text-align:left;">360</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:5608563-5609131</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">400</td>
+      <td style="text-align:left;">408</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:161741273-161741792</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">489</td>
+      <td style="text-align:left;">497</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:235657848-235658457</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">521</td>
+      <td style="text-align:left;">529</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:94820372-94821010</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">524</td>
+      <td style="text-align:left;">532</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:176261906-176262505</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">587</td>
+      <td style="text-align:left;">595</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:98722518-98723019</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">86</td>
+      <td style="text-align:left;">94</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:13336126-13336627</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">256</td>
+      <td style="text-align:left;">264</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:251616147-251616664</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">332</td>
+      <td style="text-align:left;">340</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:175555513-175556451</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">600</td>
+      <td style="text-align:left;">608</td>
+      <td style="text-align:left;">9.82e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:18516314-18516815</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">23</td>
+      <td style="text-align:left;">31</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:130167817-130168449</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">121</td>
+      <td style="text-align:left;">129</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:113049646-113050182</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">132</td>
+      <td style="text-align:left;">140</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:149203760-149204318</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">134</td>
+      <td style="text-align:left;">142</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:33561387-33561888</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">192</td>
+      <td style="text-align:left;">200</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:121459979-121460480</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">204</td>
+      <td style="text-align:left;">212</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:173062251-173062752</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">218</td>
+      <td style="text-align:left;">226</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:78465550-78466196</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">221</td>
+      <td style="text-align:left;">229</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:177932570-177933337</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">318</td>
+      <td style="text-align:left;">326</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:106788035-106788646</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">356</td>
+      <td style="text-align:left;">364</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:29674176-29674677</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">356</td>
+      <td style="text-align:left;">364</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:76064545-76065046</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">362</td>
+      <td style="text-align:left;">370</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:34742373-34742905</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">377</td>
+      <td style="text-align:left;">385</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:18516314-18516815</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">431</td>
+      <td style="text-align:left;">439</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:83085952-83086573</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">446</td>
+      <td style="text-align:left;">454</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:80825733-80826412</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">561</td>
+      <td style="text-align:left;">569</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:140145216-140146263</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">669</td>
+      <td style="text-align:left;">677</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:200233797-200234839</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1024</td>
+      <td style="text-align:left;">1032</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:169025573-169026074</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">178</td>
+      <td style="text-align:left;">186</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:130390529-130391030</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">193</td>
+      <td style="text-align:left;">201</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:40000952-40001458</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">242</td>
+      <td style="text-align:left;">250</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:150987188-150987689</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">260</td>
+      <td style="text-align:left;">268</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:71736117-71736618</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">262</td>
+      <td style="text-align:left;">270</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:36803662-36804164</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">339</td>
+      <td style="text-align:left;">347</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:105519727-105520228</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">381</td>
+      <td style="text-align:left;">389</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:111733855-111734390</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">419</td>
+      <td style="text-align:left;">427</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:132341917-132342418</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">429</td>
+      <td style="text-align:left;">437</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:130611852-130612353</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">434</td>
+      <td style="text-align:left;">442</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:157829012-157829755</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">457</td>
+      <td style="text-align:left;">465</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:60568508-60569249</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">550</td>
+      <td style="text-align:left;">558</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:59335933-59336467</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3</td>
+      <td style="text-align:left;">11</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:126417540-126418053</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">21</td>
+      <td style="text-align:left;">29</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:215297984-215298528</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">75</td>
+      <td style="text-align:left;">83</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:36230408-36230909</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">79</td>
+      <td style="text-align:left;">87</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:194025727-194026228</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">87</td>
+      <td style="text-align:left;">95</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:5608563-5609131</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">117</td>
+      <td style="text-align:left;">125</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:19503284-19503861</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">140</td>
+      <td style="text-align:left;">148</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:30266661-30267162</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">211</td>
+      <td style="text-align:left;">219</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:183440506-183441075</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">225</td>
+      <td style="text-align:left;">233</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:42497130-42497769</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">232</td>
+      <td style="text-align:left;">240</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:127283263-127283806</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">331</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:173226455-173226967</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">368</td>
+      <td style="text-align:left;">376</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:186356501-186357367</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">513</td>
+      <td style="text-align:left;">521</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:174921895-174922723</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">561</td>
+      <td style="text-align:left;">569</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:92371794-92373307</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">583</td>
+      <td style="text-align:left;">591</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:220849012-220849529</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">21</td>
+      <td style="text-align:left;">29</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:115953841-115954359</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">38</td>
+      <td style="text-align:left;">46</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:185614968-185615469</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">68</td>
+      <td style="text-align:left;">76</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:67358184-67358685</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">123</td>
+      <td style="text-align:left;">131</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:169023817-169024590</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">130</td>
+      <td style="text-align:left;">138</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:38459939-38460440</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">141</td>
+      <td style="text-align:left;">149</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:60925155-60925656</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">153</td>
+      <td style="text-align:left;">161</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:119131435-119131940</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">157</td>
+      <td style="text-align:left;">165</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:114083181-114083682</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">161</td>
+      <td style="text-align:left;">169</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:130710451-130711008</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">196</td>
+      <td style="text-align:left;">204</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:146874810-146875346</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">275</td>
+      <td style="text-align:left;">283</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:98482770-98483271</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">277</td>
+      <td style="text-align:left;">285</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:105004892-105005420</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">282</td>
+      <td style="text-align:left;">290</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:199723554-199724055</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">294</td>
+      <td style="text-align:left;">302</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:49580750-49581252</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">300</td>
+      <td style="text-align:left;">308</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:232142324-232143197</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">327</td>
+      <td style="text-align:left;">335</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:161001519-161002132</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">350</td>
+      <td style="text-align:left;">358</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:5075066-5075659</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">350</td>
+      <td style="text-align:left;">358</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:52567796-52568297</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">363</td>
+      <td style="text-align:left;">371</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:157419626-157420165</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">488</td>
+      <td style="text-align:left;">496</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:204254547-204255242</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">517</td>
+      <td style="text-align:left;">525</td>
+      <td style="text-align:left;">1.98e-05</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:112265796-112266450</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">83</td>
+      <td style="text-align:left;">91</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:112847632-112848218</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">88</td>
+      <td style="text-align:left;">96</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:209028556-209029057</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">117</td>
+      <td style="text-align:left;">125</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:188247805-188248306</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">199</td>
+      <td style="text-align:left;">207</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:103859906-103860409</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">225</td>
+      <td style="text-align:left;">233</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:157514185-157514686</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">243</td>
+      <td style="text-align:left;">251</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:12490782-12491283</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">285</td>
+      <td style="text-align:left;">293</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:49599993-49600546</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">384</td>
+      <td style="text-align:left;">392</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:86281652-86282189</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">399</td>
+      <td style="text-align:left;">407</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:114390149-114390699</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">408</td>
+      <td style="text-align:left;">416</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:126085614-126086468</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">451</td>
+      <td style="text-align:left;">459</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:202215604-202216105</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">464</td>
+      <td style="text-align:left;">472</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:218262337-218262838</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">23</td>
+      <td style="text-align:left;">31</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:130590639-130591143</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">53</td>
+      <td style="text-align:left;">61</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:120504744-120505245</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">106</td>
+      <td style="text-align:left;">114</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:22051592-22052171</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">133</td>
+      <td style="text-align:left;">141</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:162231280-162231781</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">312</td>
+      <td style="text-align:left;">320</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:120158271-120158772</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">380</td>
+      <td style="text-align:left;">388</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:215300524-215301038</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">424</td>
+      <td style="text-align:left;">432</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:52847104-52847636</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">503</td>
+      <td style="text-align:left;">511</td>
+      <td style="text-align:left;">2.58e-05</td>
+      <td style="text-align:left;">0.273</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:25168445-25168984</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">17</td>
+      <td style="text-align:left;">25</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:184801739-184802240</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">80</td>
+      <td style="text-align:left;">88</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:170710283-170710784</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">141</td>
+      <td style="text-align:left;">149</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:977815-978316</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">163</td>
+      <td style="text-align:left;">171</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:126715036-126715577</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">283</td>
+      <td style="text-align:left;">291</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:139871838-139872343</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">321</td>
+      <td style="text-align:left;">329</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:154481556-154482202</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">338</td>
+      <td style="text-align:left;">346</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:49176255-49176756</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">443</td>
+      <td style="text-align:left;">451</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:32518220-32518807</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">536</td>
+      <td style="text-align:left;">544</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:173402145-173402646</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">148</td>
+      <td style="text-align:left;">156</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:75579243-75579744</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">411</td>
+      <td style="text-align:left;">419</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:14416519-14417289</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">539</td>
+      <td style="text-align:left;">547</td>
+      <td style="text-align:left;">3.18e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:137948432-137948933</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">86</td>
+      <td style="text-align:left;">94</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:11152010-11152511</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">142</td>
+      <td style="text-align:left;">150</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:146719011-146719560</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">175</td>
+      <td style="text-align:left;">183</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:3080585-3081128</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">185</td>
+      <td style="text-align:left;">193</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:207412556-207413060</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">204</td>
+      <td style="text-align:left;">212</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:19503284-19503861</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">208</td>
+      <td style="text-align:left;">216</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:2665971-2666472</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">219</td>
+      <td style="text-align:left;">227</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:114242642-114243143</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">223</td>
+      <td style="text-align:left;">231</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:94291840-94292357</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">245</td>
+      <td style="text-align:left;">253</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:103859906-103860409</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">282</td>
+      <td style="text-align:left;">290</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:202039852-202040358</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">282</td>
+      <td style="text-align:left;">290</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:161201073-161201574</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">286</td>
+      <td style="text-align:left;">294</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:147714819-147715339</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">291</td>
+      <td style="text-align:left;">299</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:44609458-44610481</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">305</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:49932203-49932704</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">306</td>
+      <td style="text-align:left;">314</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:15600944-15601499</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">373</td>
+      <td style="text-align:left;">381</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:189899015-189899575</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">395</td>
+      <td style="text-align:left;">403</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:167979095-167979596</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">422</td>
+      <td style="text-align:left;">430</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:64087723-64088581</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">431</td>
+      <td style="text-align:left;">439</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:85925588-85926104</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">507</td>
+      <td style="text-align:left;">515</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:154639927-154640428</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">22</td>
+      <td style="text-align:left;">30</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:70284083-70284584</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">38</td>
+      <td style="text-align:left;">46</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:104798843-104799403</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">42</td>
+      <td style="text-align:left;">50</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:159915708-159916355</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">82</td>
+      <td style="text-align:left;">90</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:186505896-186506397</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">141</td>
+      <td style="text-align:left;">149</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:162739813-162740314</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">163</td>
+      <td style="text-align:left;">171</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:227818759-227819261</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">214</td>
+      <td style="text-align:left;">222</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:61309407-61309910</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">256</td>
+      <td style="text-align:left;">264</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:279662926-279663470</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">278</td>
+      <td style="text-align:left;">286</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:91305295-91305796</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">316</td>
+      <td style="text-align:left;">324</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:190638351-190638852</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">332</td>
+      <td style="text-align:left;">340</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:113964258-113964871</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">341</td>
+      <td style="text-align:left;">349</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:85035988-85036583</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">399</td>
+      <td style="text-align:left;">407</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:94322896-94323436</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">486</td>
+      <td style="text-align:left;">494</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:94050921-94051796</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">538</td>
+      <td style="text-align:left;">546</td>
+      <td style="text-align:left;">3.78e-05</td>
+      <td style="text-align:left;">0.304</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:220785536-220786131</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">10</td>
+      <td style="text-align:left;">18</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:287399633-287400134</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">135</td>
+      <td style="text-align:left;">143</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:150432623-150433124</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">184</td>
+      <td style="text-align:left;">192</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:158896980-158897481</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">276</td>
+      <td style="text-align:left;">284</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:122704426-122704994</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">331</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:193601545-193602046</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">337</td>
+      <td style="text-align:left;">345</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:272064537-272065114</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">357</td>
+      <td style="text-align:left;">365</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:112567223-112567867</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">526</td>
+      <td style="text-align:left;">534</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:220354703-220355478</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">644</td>
+      <td style="text-align:left;">652</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:14821105-14821647</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">36</td>
+      <td style="text-align:left;">44</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:8620732-8621233</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">200</td>
+      <td style="text-align:left;">208</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:42497130-42497769</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">269</td>
+      <td style="text-align:left;">277</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:38760329-38760830</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">270</td>
+      <td style="text-align:left;">278</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:9172723-9173224</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">278</td>
+      <td style="text-align:left;">286</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:213522805-213523306</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">360</td>
+      <td style="text-align:left;">368</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:22519054-22519663</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">381</td>
+      <td style="text-align:left;">389</td>
+      <td style="text-align:left;">4.18e-05</td>
+      <td style="text-align:left;">0.311</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:176304937-176305479</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">339</td>
+      <td style="text-align:left;">347</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:36949661-36950242</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">496</td>
+      <td style="text-align:left;">504</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:33257563-33258064</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">75</td>
+      <td style="text-align:left;">83</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:54426815-54427316</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">128</td>
+      <td style="text-align:left;">136</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:26632953-26633532</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">164</td>
+      <td style="text-align:left;">172</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:130710451-130711008</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">173</td>
+      <td style="text-align:left;">181</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:90103936-90104437</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">225</td>
+      <td style="text-align:left;">233</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:35659295-35660307</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">244</td>
+      <td style="text-align:left;">252</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:201887700-201888292</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">287</td>
+      <td style="text-align:left;">295</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:163799687-163800196</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">338</td>
+      <td style="text-align:left;">346</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:28846868-28847499</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">514</td>
+      <td style="text-align:left;">522</td>
+      <td style="text-align:left;">4.67e-05</td>
+      <td style="text-align:left;">0.33</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:37968248-37968749</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">19</td>
+      <td style="text-align:left;">27</td>
+      <td style="text-align:left;">5.27e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:977815-978316</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">68</td>
+      <td style="text-align:left;">76</td>
+      <td style="text-align:left;">5.27e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:144216842-144217343</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">189</td>
+      <td style="text-align:left;">197</td>
+      <td style="text-align:left;">5.27e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:274491305-274492432</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">619</td>
+      <td style="text-align:left;">627</td>
+      <td style="text-align:left;">5.27e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:66986056-66986655</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">18</td>
+      <td style="text-align:left;">26</td>
+      <td style="text-align:left;">5.27e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:31059521-31060030</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">47</td>
+      <td style="text-align:left;">55</td>
+      <td style="text-align:left;">5.27e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:112739964-112740465</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">86</td>
+      <td style="text-align:left;">94</td>
+      <td style="text-align:left;">5.27e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:104049194-104049721</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">265</td>
+      <td style="text-align:left;">273</td>
+      <td style="text-align:left;">5.27e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:116449918-116451039</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">888</td>
+      <td style="text-align:left;">896</td>
+      <td style="text-align:left;">5.27e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:229613502-229614009</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">16</td>
+      <td style="text-align:left;">24</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:139442310-139443034</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">56</td>
+      <td style="text-align:left;">64</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:145849028-145849692</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">138</td>
+      <td style="text-align:left;">146</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:2665971-2666472</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">237</td>
+      <td style="text-align:left;">245</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:65576360-65576919</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">286</td>
+      <td style="text-align:left;">294</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:25168445-25168984</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">390</td>
+      <td style="text-align:left;">398</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:155054439-155054946</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">406</td>
+      <td style="text-align:left;">414</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:111254968-111255523</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">465</td>
+      <td style="text-align:left;">473</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:27760467-27760978</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">498</td>
+      <td style="text-align:left;">506</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:212661069-212661623</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">4</td>
+      <td style="text-align:left;">12</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:113605403-113605904</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">36</td>
+      <td style="text-align:left;">44</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:214484407-214484989</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">77</td>
+      <td style="text-align:left;">85</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:206625313-206626292</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">114</td>
+      <td style="text-align:left;">122</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:100191549-100192056</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">430</td>
+      <td style="text-align:left;">438</td>
+      <td style="text-align:left;">5.99e-05</td>
+      <td style="text-align:left;">0.385</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATAATTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:49580750-49581252</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">21</td>
+      <td style="text-align:left;">29</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:145630523-145631024</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">78</td>
+      <td style="text-align:left;">86</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:145503069-145503570</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">125</td>
+      <td style="text-align:left;">133</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:11587828-11588329</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">163</td>
+      <td style="text-align:left;">171</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:134319997-134320525</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">401</td>
+      <td style="text-align:left;">409</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:49932203-49932704</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">487</td>
+      <td style="text-align:left;">495</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:167363278-167363779</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">71</td>
+      <td style="text-align:left;">79</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:40557320-40557821</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">99</td>
+      <td style="text-align:left;">107</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:293835598-293836146</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">247</td>
+      <td style="text-align:left;">255</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:39138904-39139461</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">312</td>
+      <td style="text-align:left;">320</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:235209108-235209609</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">406</td>
+      <td style="text-align:left;">414</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:141813430-141814043</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">408</td>
+      <td style="text-align:left;">416</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:87086985-87087939</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">473</td>
+      <td style="text-align:left;">481</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:237611330-237611831</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">482</td>
+      <td style="text-align:left;">490</td>
+      <td style="text-align:left;">6.49e-05</td>
+      <td style="text-align:left;">0.394</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATCATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:152329060-152329658</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">101</td>
+      <td style="text-align:left;">109</td>
+      <td style="text-align:left;">6.89e-05</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAGTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:210339220-210339756</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">251</td>
+      <td style="text-align:left;">259</td>
+      <td style="text-align:left;">6.89e-05</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAGTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:266883044-266883545</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">378</td>
+      <td style="text-align:left;">386</td>
+      <td style="text-align:left;">6.89e-05</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAGTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:220849012-220849529</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">387</td>
+      <td style="text-align:left;">395</td>
+      <td style="text-align:left;">6.89e-05</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAGTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:287506623-287507208</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">509</td>
+      <td style="text-align:left;">517</td>
+      <td style="text-align:left;">6.89e-05</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAGTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:7218944-7219457</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">125</td>
+      <td style="text-align:left;">133</td>
+      <td style="text-align:left;">6.89e-05</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAGTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:59014889-59015438</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">198</td>
+      <td style="text-align:left;">206</td>
+      <td style="text-align:left;">6.89e-05</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAGTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:59014889-59015438</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">223</td>
+      <td style="text-align:left;">231</td>
+      <td style="text-align:left;">6.89e-05</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAGTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:303602062-303603421</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">418</td>
+      <td style="text-align:left;">426</td>
+      <td style="text-align:left;">6.89e-05</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAGTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:90973516-90974017</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">12</td>
+      <td style="text-align:left;">20</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:95558324-95558825</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">67</td>
+      <td style="text-align:left;">75</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:214484407-214484989</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">264</td>
+      <td style="text-align:left;">272</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:274450773-274451285</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">288</td>
+      <td style="text-align:left;">296</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:147714819-147715339</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">347</td>
+      <td style="text-align:left;">355</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:149360737-149361409</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">350</td>
+      <td style="text-align:left;">358</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:9172032-9172544</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">350</td>
+      <td style="text-align:left;">358</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:163232524-163233038</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">443</td>
+      <td style="text-align:left;">451</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:168026225-168026776</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">81</td>
+      <td style="text-align:left;">89</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:167935166-167935773</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">109</td>
+      <td style="text-align:left;">117</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:79173377-79173901</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">492</td>
+      <td style="text-align:left;">500</td>
+      <td style="text-align:left;">7.29e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATGATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:220413526-220414027</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">300</td>
+      <td style="text-align:left;">308</td>
+      <td style="text-align:left;">7.69e-05</td>
+      <td style="text-align:left;">0.429</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAACGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:104798843-104799403</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">491</td>
+      <td style="text-align:left;">499</td>
+      <td style="text-align:left;">7.69e-05</td>
+      <td style="text-align:left;">0.429</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAACGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:173260473-173261260</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">777</td>
+      <td style="text-align:left;">785</td>
+      <td style="text-align:left;">7.69e-05</td>
+      <td style="text-align:left;">0.429</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAACGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:132341917-132342418</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">49</td>
+      <td style="text-align:left;">57</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:2187388-2187911</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">60</td>
+      <td style="text-align:left;">68</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:2187388-2187911</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">81</td>
+      <td style="text-align:left;">89</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:15409669-15410176</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">95</td>
+      <td style="text-align:left;">103</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:155054439-155054946</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">171</td>
+      <td style="text-align:left;">179</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:151369492-151369994</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">211</td>
+      <td style="text-align:left;">219</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:115527196-115527763</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">212</td>
+      <td style="text-align:left;">220</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:154571920-154572421</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">328</td>
+      <td style="text-align:left;">336</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:150987188-150987689</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">368</td>
+      <td style="text-align:left;">376</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:125477394-125478530</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">713</td>
+      <td style="text-align:left;">721</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr8:14988063-14988564</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">104</td>
+      <td style="text-align:left;">112</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:174917645-174918155</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">120</td>
+      <td style="text-align:left;">128</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:218981665-218982166</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">217</td>
+      <td style="text-align:left;">225</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:29674176-29674677</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">238</td>
+      <td style="text-align:left;">246</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:146658676-146659266</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">256</td>
+      <td style="text-align:left;">264</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:173371655-173372202</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">279</td>
+      <td style="text-align:left;">287</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:203594307-203594808</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">309</td>
+      <td style="text-align:left;">317</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:139169371-139169872</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">398</td>
+      <td style="text-align:left;">406</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:290336777-290337318</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">437</td>
+      <td style="text-align:left;">445</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:55427640-55428184</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">444</td>
+      <td style="text-align:left;">452</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:290336777-290337318</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">446</td>
+      <td style="text-align:left;">454</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:105519727-105520228</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">481</td>
+      <td style="text-align:left;">489</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:23441202-23441776</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">498</td>
+      <td style="text-align:left;">506</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.434</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATAATTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:158443352-158443853</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">144</td>
+      <td style="text-align:left;">152</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.447</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:185402247-185402748</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">197</td>
+      <td style="text-align:left;">205</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.447</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:46213152-46213653</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">211</td>
+      <td style="text-align:left;">219</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.447</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:168026225-168026776</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">416</td>
+      <td style="text-align:left;">424</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.447</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:12038751-12039311</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">36</td>
+      <td style="text-align:left;">44</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.447</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:156851472-156852025</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">77</td>
+      <td style="text-align:left;">85</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.447</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:224168453-224169079</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">256</td>
+      <td style="text-align:left;">264</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.447</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:89627978-89628479</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">297</td>
+      <td style="text-align:left;">305</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.447</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:50203767-50204357</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">302</td>
+      <td style="text-align:left;">310</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.447</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAATAATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:130710451-130711008</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">12</td>
+      <td style="text-align:left;">20</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:186306914-186307415</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">81</td>
+      <td style="text-align:left;">89</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:157514185-157514686</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">191</td>
+      <td style="text-align:left;">199</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:75087531-75088032</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">230</td>
+      <td style="text-align:left;">238</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:40555959-40556480</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">324</td>
+      <td style="text-align:left;">332</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:79173377-79173901</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">327</td>
+      <td style="text-align:left;">335</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:79173377-79173901</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">372</td>
+      <td style="text-align:left;">380</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:110399745-110400256</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">18</td>
+      <td style="text-align:left;">26</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:140145216-140146263</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">68</td>
+      <td style="text-align:left;">76</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:238685218-238685785</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">156</td>
+      <td style="text-align:left;">164</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:130710451-130711008</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">165</td>
+      <td style="text-align:left;">173</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr6:10126860-10127388</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">340</td>
+      <td style="text-align:left;">348</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:198109558-198110200</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">346</td>
+      <td style="text-align:left;">354</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:59014889-59015438</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">415</td>
+      <td style="text-align:left;">423</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:63306612-63307124</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">451</td>
+      <td style="text-align:left;">459</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr2:59863508-59864338</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">452</td>
+      <td style="text-align:left;">460</td>
+      <td style="text-align:left;">9.4e-05</td>
+      <td style="text-align:left;">0.448</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATCATGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:212661069-212661623</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">47</td>
+      <td style="text-align:left;">55</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:32691111-32691622</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">48</td>
+      <td style="text-align:left;">56</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr4:131802133-131802636</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">64</td>
+      <td style="text-align:left;">72</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr9:147643332-147643889</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">128</td>
+      <td style="text-align:left;">136</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:95001782-95002303</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">134</td>
+      <td style="text-align:left;">142</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:208669117-208669652</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">141</td>
+      <td style="text-align:left;">149</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:208669117-208669652</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">154</td>
+      <td style="text-align:left;">162</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr5:204303808-204304309</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">215</td>
+      <td style="text-align:left;">223</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr10:36949661-36950242</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">224</td>
+      <td style="text-align:left;">232</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr7:137517940-137518820</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">256</td>
+      <td style="text-align:left;">264</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:209761025-209761608</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">143</td>
+      <td style="text-align:left;">151</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:2017308-2017809</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">167</td>
+      <td style="text-align:left;">175</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr1:4549234-4549777</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">305</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">IMOCHigher</td>
+      <td style="text-align:left;">IM_OC_Bif3Higher_TAAT</td>
+      <td style="text-align:left;">chr3:203557834-203558822</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">786</td>
+      <td style="text-align:left;">794</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAATTATGC</td>
+   </tr>
+</tbody>
+</table>
+
+<hr>
+<center><big><b><a name="debugging_information">DEBUGGING INFORMATION</a></b></big></center>
+<hr>
+<p>
+Command line:
+</p>
+<pre>
+fimo --o /scratch/sb14489/3.scATAC/2.Maize_ear/10.MotifAnalysis/3.fimo/Revision_IM-OC.FDR0.05Bif3Higher /scratch/sb14489/3.scATAC/0.Data/Plant_Motif_PWM/CentralZone_TAAT.txt /scratch/sb14489/3.scATAC/2.Maize_ear/8.Comparative_Analysis/2.dACR/A619_vs_Bif3_AnnV4/IM-OC.FDR0.05A619Higher.fasta
+</pre>
+<p>
+Settings:
+</p>
+<pre>
+<table>
+  <tr>
+    <td style="padding-right: 2em">output_directory = /scratch/sb14489/3.scATAC/2.Maize_ear/10.MotifAnalysis/3.fimo/Revision_IM-OC.FDR0.05Bif3Higher</td>
+    <td style="padding-left: 5em; padding-right: 2em">MEME file name = /scratch/sb14489/3.scATAC/0.Data/Plant_Motif_PWM/CentralZone_TAAT.txt</td>
+    <td style="padding-left: 5em; padding-right: 2em">sequence file name = /scratch/sb14489/3.scATAC/2.Maize_ear/8.Comparative_Analysis/2.dACR/A619_vs_Bif3_AnnV4/IM-OC.FDR0.05A619Higher.fasta</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">background file name = --nrdb--</td>
+    <td style="padding-left: 5em; padding-right: 2em">alphabet = DNA</td>
+    <td style="padding-left: 5em; padding-right: 2em">max stored scores = 100000</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">allow clobber = false</td>
+    <td style="padding-left: 5em; padding-right: 2em">compute q-values = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">parse genomic coord. = false</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">text only = false</td>
+    <td style="padding-left: 5em; padding-right: 2em">scan both strands = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">max strand = false</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">threshold type = p-value</td>
+    <td style="padding-left: 5em; padding-right: 2em">output theshold = 0.0001</td>
+    <td style="padding-left: 5em; padding-right: 2em">pseudocount = 0.1</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">alpha = 1</td>
+    <td style="padding-left: 5em; padding-right: 2em">verbosity = 2</td>
+    <td style="padding-left: 5em; padding-right: 2em"></td>
+  </tr>
+
+</table>
+</pre>
+<p>
+This information can be useful in the event you wish to report a
+problem with the FIMO software.
+</p>
+<hr>
+<span style="background-color: #DDDDFF"><a href="#top_buttons"><b>Go to top</b></a></span>
+</body>
+</html>

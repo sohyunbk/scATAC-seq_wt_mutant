@@ -1,0 +1,18 @@
+motif_id	motif_alt_id	sequence_name	start	stop	strand	score	p-value	q-value	matched_sequence
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr6:7300078-7300612	282	290	+	15.7143	4.91e-06	0.118	CAATAATGC
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr8:118219237-118219738	24	32	-	15.7143	4.91e-06	0.118	CAATAATGC
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr1:274491854-274492364	197	205	-	15.7143	4.91e-06	0.118	CAATAATGC
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr8:155211937-155212438	396	404	-	14.0119	1.58e-05	0.285	CAATAATTC
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr7:78525223-78525771	232	240	+	12.5238	3.18e-05	0.383	CAATAATGT
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr5:6528586-6529114	61	69	-	12.5238	3.18e-05	0.383	CAATAATGT
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr1:274491854-274492364	70	78	+	11.881	5.27e-05	0.476	TAATAATGG
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr7:41465009-41466037	559	567	-	11.881	5.27e-05	0.476	TAATAATGG
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr6:41142259-41142828	116	124	+	10.9524	7.29e-05	0.55	CAATGATGC
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr6:179346742-179347294	231	239	+	10.9167	7.69e-05	0.55	CAATAACGC
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr1:228669305-228670434	389	397	-	10.7857	8.91e-05	0.55	GAATAATGC
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr2:3818904-3819405	418	426	-	10.7024	9.4e-05	0.55	CAATCATGT
+IMOCHigher	IM_OC_Bif3Higher_TAAT	chr5:95001748-95002316	168	176	+	10.5595	9.89e-05	0.55	CAATTATGC
+
+# FIMO (Find Individual Motif Occurrences): Version 5.5.0 compiled on Aug 26 2023 at 02:12:18
+# The format of this file is described at https://meme-suite.org/meme/doc/fimo-output-format.html.
+# fimo --o /scratch/sb14489/3.scATAC/2.Maize_ear/10.MotifAnalysis/3.fimo/Revision_Unknown1.FDR0.05Bif3Higher /scratch/sb14489/3.scATAC/0.Data/Plant_Motif_PWM/CentralZone_TAAT.txt /scratch/sb14489/3.scATAC/2.Maize_ear/8.Comparative_Analysis/2.dACR/A619_vs_Bif3_AnnV4/Unknown1.FDR0.05A619Higher.fasta
