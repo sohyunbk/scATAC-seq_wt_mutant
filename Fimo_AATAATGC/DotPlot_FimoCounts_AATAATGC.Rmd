@@ -1,0 +1,62 @@
+---
+title: "DotPlot_FimoCounts_AATAATGC"
+author: "Sohyun Bang"
+output: 
+  github_document
+---
+
+```{r setup, include=FALSE}
+library(rlang)
+library(ggplot2)
+library(ggrepel)
+```
+
+## Load the data and curate the table
+The data is from Fimo output from the bash code below.
+for dir in Revision_*; do
+  if [[ -f "$dir/fimo.tsv" ]]; then
+    label=${dir#Revision_}
+    count=$(awk 'NR >1 {print $3}' '"$dir/fimo.tsv" | sort -u | wc -l)
+    echo -e "${label}\t${count}"
+    fi
+done
+
+This bash script bring all the fimo results from dACRs across all cell types.
+The input table is manually made in the format from the dotplot dACR numbe counts.
+
+```{r load data}
+FimoResult <- read.table("./Fimo_AATAATGC_Summary.txt",header=TRUE,sep="\t")
+custom_colors <- c("#802652","#5d850f") 
+FimoResult$ratio <- (FimoResult$Sig / FimoResult$Intergenic_ACR)*100
+
+FimoResult$Color <- factor(FimoResult$Color,levels=c("Bif3Higher","WTHigher"))
+FimoResult$Celltype <- factor(FimoResult$Celltype,levels=c("Epidermis1","Epidermis2","Suppressed bract or Glume",
+                                                           "Central zone","Axillary meristem base"
+                                                           ,"Proto/Meta xylem or Procambium","Phloem precursor","Proto/Meta phloem"))
+```
+
+## Draw plot
+```{r fimo_count_CAATAATGC, fig.width=12, fig.height=8}
+ggplot(FimoResult, aes(x = Sig, y = Celltype, size = ratio)) +
+  geom_point(aes(colour = factor(Color)),alpha=0.5)+  # New geom_point for Higher_Bif3Ratio
+  scale_size_continuous(range = c(1, 15)) +
+  scale_color_manual(values = custom_colors) +
+  theme_minimal() +
+  geom_text_repel(aes(label = Sig), size = 4, nudge_x = 10, max.overlaps = Inf) +
+  labs(x = "The number of dACR with CAATAATGC motif", y = "Cell type", title = " ", size = "dACR Ratio") +
+  theme(axis.text.y = element_text(size = 16),
+        legend.text = element_text(size = 16),  # Adjust legend text size if needed
+        legend.title = element_text(size = 16), # Adjust legend title size if needed
+        axis.title.y = element_text(size = 16), # Adjust y-axis title size if needed
+        axis.title.x = element_text(size = 16), # Adjust x-axis title size if needed
+        title = element_text(size = 24), # Adjust title size if needed
+        plot.title = element_text(size = 28), # Adjust plot title size if needed
+        strip.text = element_text(size = 16), # Adjust facet strip text size if needed
+        axis.ticks = element_blank(), # Remove axis tick marks
+        axis.line = element_line(colour = "black"), # Add axis lines
+        axis.line.x = element_line(), # Customize x-axis line separately
+        axis.line.y = element_line() # Customize y-axis line separately
+  )+labs(color = " ")
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

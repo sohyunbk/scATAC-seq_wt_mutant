@@ -1,0 +1,151 @@
+---
+title: "Getting FC (Bif3/WT) of gene body chromatin acc"
+author: "Sohyun Bang"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  github_document
+---
+```{r setopts, echo=FALSE}
+library(edgeR)
+library(preprocessCore)
+library(dplyr)
+library(tidyr)
+
+rm(list = ls())
+## Save figures as pdf files for illustrator. Save figures as png files for md visualization. 
+knitr::opts_chunk$set(
+  echo = TRUE,
+  dev = c("png", "pdf"),
+  fig.keep = "all"
+)
+options(getClass.msg = FALSE)
+
+set_fig_path <- function(options) {
+  options$fig.path <- "output/fig-"
+  options
+}
+knitr::opts_hooks$set(dev = set_fig_path)
+```
+### 1) Get Gene body acc for all the genes & normalize the value & calculate logFC
+```{r Load Data}
+### 1) Get Gene body acc for all the genes
+## load gene*cell table.
+WT_GeneXCT <- read.table("./A619_AnnV4.GeneBodyACC.byGeneXCT.txt",header=TRUE)
+Bif3_GeneXCT <- read.table("./Bif3_AnnV4.GeneBodyACC.byGeneXCT.txt",header=TRUE)
+Celltypes <- colnames(WT_GeneXCT)[-1]
+colnames(Bif3_GeneXCT)[-1] <- paste("Bif3&", colnames(Bif3_GeneXCT)[-1], sep="")
+colnames(WT_GeneXCT)[-1] <- paste("A619&", colnames(WT_GeneXCT)[-1], sep="")
+
+GeneXCT <- merge(WT_GeneXCT, Bif3_GeneXCT, by = "gene")
+head(GeneXCT)
+
+## normalization
+GeneNames <- GeneXCT[, 1]
+gene_counts_df <- GeneXCT[, -1]
+
+## Set up the cut off to 50!
+#head(GeneXCT)
+#dim(GeneXCT)
+
+GeneXCT_MoreThan50Tn5 <- GeneXCT %>%
+  filter_all(all_vars(. > 50))
+dim(GeneXCT_MoreThan50Tn5)
+
+GeneNames <- GeneXCT[, 1]
+gene_counts_df <- GeneXCT[, -1]
+
+cpm_data <- cpm(DGEList(counts = gene_counts_df), log = FALSE)
+QNorm <- normalize.quantiles(as.matrix(gene_counts_df))
+rownames(QNorm) <- GeneNames
+colnames(QNorm) <- colnames(GeneXCT[,-1])
+#head(QNorm)
+#dim(QNorm)
+
+# Build fold change table
+FCTable <- as.data.frame(sapply(Celltypes, function(Celltypes) {
+  bif3_col <- paste0("Bif3&", Celltypes)
+  A619_col <- paste0("A619&", Celltypes)
+  log2(QNorm[, bif3_col] / QNorm[, A619_col])
+}))
+```
+### 2) Matching with gene names
+```{r matching with gene names}
+
+#### 2) Find ARF genes
+GeneInfo <- read.delim("../maizev5_data/Zm00001eb.1.fulldata_Curated2.txt", stringsAsFactors = FALSE)
+
+FCTable_with_id <- FCTable %>%
+  tibble::rownames_to_column(var = "gene_model")
+
+FCTable_annotated <- FCTable_with_id %>%
+  left_join(GeneInfo[, c("gene_model", "locus_symbol")], by = "gene_model")
+
+#FCTable_annotated[FCTable_annotated$gene_model == "Zm00001eb067310",]
+#FCTable_annotated[FCTable_annotated$gene_model == "Zm00001eb168120",]
+```
+
+### 3) Check Homemodomain TFs
+```{r check the types of TFs}
+TFlist <- read.delim("./Zma_TF_list.txt", stringsAsFactors = FALSE) ## This data is from https://planttfdb.gao-lab.org/index.php?sp=Zma
+
+## Filter TFs with HD
+#HD_TFs <- TFlist %>%
+#  filter(Family %in% c("ZF-HD", "HD-ZIP", "WOX", "HB0PHD", "HB-other"))
+
+V3_V5 <- read.delim("B73v3_to_B73v5.tsv", stringsAsFactors = FALSE)
+
+HD_TFs_merged <- merge(TFlist, V3_V5, by.x = "Gene_ID", by.y = "V3", all.x = TRUE)
+HD_TFs_expanded <- HD_TFs_merged %>% ## This is because to make V5 gene id as the key
+  separate_rows(V5, sep = ",") %>%
+  rename(gene_model=V5) 
+
+HD_TFs_V5Key <- HD_TFs_expanded %>%
+  group_by(gene_model) %>%
+  summarise(Family = paste(sort(unique(Family)), collapse = ","), .groups = "drop")
+
+FCTable_annotated_TFInfo <- FCTable_annotated %>%
+  left_join(HD_TFs_V5Key[, c("gene_model","Family")], by = "gene_model") %>%
+  rename(TF_Family = Family)
+
+FCTable_with_HD <- FCTable_annotated_TFInfo %>%
+  filter(TF_Family %in% c("ZF-HD", "HD-ZIP", "WOX", "HB0PHD", "HB-other") )
+
+FCTable_with_HD[FCTable_with_HD$gene_model=="Zm00001eb433010",] #ZmWUS2
+FCTable_with_HD[FCTable_with_HD$gene_model=="Zm00001eb067310",] #ZmWUS1
+Up_inCentralZone <- FCTable_with_HD %>% filter(IM.OC > 0.5)
+print(table(Up_inCentralZone$TF_Family))
+Up_inCentralZone[Up_inCentralZone$TF_Family=="WOX",] #ZmWUS2
+
+```
+### 4) Check De novo marker gene list
+```{r check De novo marker gene list}
+DeNovo <- read.delim("A619_v4.IM.OC_deseq_2_results.tsv", stringsAsFactors = FALSE)
+Sig_DeNovo <- DeNovo[!is.na(DeNovo$padj) & 
+                     !is.na(DeNovo$log2FoldChange) & 
+                     DeNovo$padj < 0.01 & 
+                     DeNovo$log2FoldChange > 0, ]
+
+
+Sig_DeNovo$gene_name
+
+library(VennDiagram)
+
+ven_list_all <- list(HD_TF_Up = Up_inCentralZone$gene_model, 
+                     Central_Zone_Denovo_markergene = Sig_DeNovo$gene_name)
+#print(ggVennDiagram(ven_list_all, label = "count",nintersects = 20))
+intersect(Up_inCentralZone$gene_model, Sig_DeNovo$gene_name)
+
+venn_plot <- venn.diagram(ven_list_all,
+        category.names = c("Set 1" , "Set 2"),
+        filename = "VennDiagram_DeNovoCentralZone.pdf",
+        imagetype="tiff" ,
+        height = 150 , 
+        width = 200 , 
+        resolution = 300,
+        compression = "lzw",
+        lwd = 2,
+        lty = 'blank',
+        fill = c("red","blue"))
+grid.newpage()
+grid.draw(venn_plot)
+```
