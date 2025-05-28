@@ -1,9 +1,0 @@
-motif_id	motif_alt_id	sequence_name	start	stop	strand	score	p-value	q-value	matched_sequence
-IMOCHigher	IM_OC_Bif3Higher_TAAT	chr4:49035093-49035594	242	250	+	12.5238	3.18e-05	0.362	CAATAATGT
-IMOCHigher	IM_OC_Bif3Higher_TAAT	chr5:6528591-6529150	56	64	-	12.5238	3.18e-05	0.362	CAATAATGT
-IMOCHigher	IM_OC_Bif3Higher_TAAT	chr6:179346792-179347300	181	189	+	10.9167	7.69e-05	0.564	CAATAACGC
-IMOCHigher	IM_OC_Bif3Higher_TAAT	chr5:95001753-95002315	163	171	+	10.5595	9.89e-05	0.564	CAATTATGC
-
-# FIMO (Find Individual Motif Occurrences): Version 5.5.0 compiled on Aug 26 2023 at 02:12:18
-# The format of this file is described at https://meme-suite.org/meme/doc/fimo-output-format.html.
-# fimo --o /scratch/sb14489/3.scATAC/2.Maize_ear/10.MotifAnalysis/3.fimo/Revision_G2_M.FDR0.05Bif3Higher /scratch/sb14489/3.scATAC/0.Data/Plant_Motif_PWM/CentralZone_TAAT.txt /scratch/sb14489/3.scATAC/2.Maize_ear/8.Comparative_Analysis/2.dACR/A619_vs_Bif3_AnnV4/G2_M.FDR0.05A619Higher.fasta

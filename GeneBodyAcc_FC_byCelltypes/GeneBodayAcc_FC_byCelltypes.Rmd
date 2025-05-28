@@ -10,6 +10,7 @@ library(edgeR)
 library(preprocessCore)
 library(dplyr)
 library(tidyr)
+library(VennDiagram)
 
 rm(list = ls())
 ## Save figures as pdf files for illustrator. Save figures as png files for md visualization. 
@@ -79,6 +80,7 @@ FCTable_with_id <- FCTable %>%
 
 FCTable_annotated <- FCTable_with_id %>%
   left_join(GeneInfo[, c("gene_model", "locus_symbol")], by = "gene_model")
+write.table(FCTable_annotated, file = "GeneBodyACC_FC_Bif3WT_byCelltypes.txt", sep = "\t", row.names = FALSE, quote = FALSE)
 
 #FCTable_annotated[FCTable_annotated$gene_model == "Zm00001eb067310",]
 #FCTable_annotated[FCTable_annotated$gene_model == "Zm00001eb168120",]
@@ -113,6 +115,7 @@ FCTable_with_HD <- FCTable_annotated_TFInfo %>%
 FCTable_with_HD[FCTable_with_HD$gene_model=="Zm00001eb433010",] #ZmWUS2
 FCTable_with_HD[FCTable_with_HD$gene_model=="Zm00001eb067310",] #ZmWUS1
 Up_inCentralZone <- FCTable_with_HD %>% filter(IM.OC > 0.5)
+#FCTable_with_HD %>% filter(IM.OC < -0.5)
 print(table(Up_inCentralZone$TF_Family))
 Up_inCentralZone[Up_inCentralZone$TF_Family=="WOX",] #ZmWUS2
 
@@ -128,14 +131,12 @@ Sig_DeNovo <- DeNovo[!is.na(DeNovo$padj) &
 
 Sig_DeNovo$gene_name
 
-library(VennDiagram)
-
 ven_list_all <- list(HD_TF_Up = Up_inCentralZone$gene_model, 
                      Central_Zone_Denovo_markergene = Sig_DeNovo$gene_name)
 #print(ggVennDiagram(ven_list_all, label = "count",nintersects = 20))
 intersect(Up_inCentralZone$gene_model, Sig_DeNovo$gene_name)
 
-venn_plot <- venn.diagram(ven_list_all,
+venn.diagram(ven_list_all,
         category.names = c("Set 1" , "Set 2"),
         filename = "VennDiagram_DeNovoCentralZone.pdf",
         imagetype="tiff" ,
@@ -146,6 +147,5 @@ venn_plot <- venn.diagram(ven_list_all,
         lwd = 2,
         lty = 'blank',
         fill = c("red","blue"))
-grid.newpage()
-grid.draw(venn_plot)
+
 ```

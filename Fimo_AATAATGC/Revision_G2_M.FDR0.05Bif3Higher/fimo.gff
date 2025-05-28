@@ -1,5 +1,0 @@
-##gff-version 3
-chr4:49035093-49035594	fimo	nucleotide_motif	242	250	 45	+	.	Name=IMOCHigher_chr4:49035093-49035594+;Alias=IM_OC_Bif3Higher_TAAT;ID=IMOCHigher-IM_OC_Bif3Higher_TAAT-1-chr4:49035093-49035594;pvalue=3.18e-05;qvalue=0.362;sequence=CAATAATGT;
-chr5:6528591-6529150	fimo	nucleotide_motif	56	64	 45	-	.	Name=IMOCHigher_chr5:6528591-6529150-;Alias=IM_OC_Bif3Higher_TAAT;ID=IMOCHigher-IM_OC_Bif3Higher_TAAT-1-chr5:6528591-6529150;pvalue=3.18e-05;qvalue=0.362;sequence=CAATAATGT;
-chr5:95001753-95002315	fimo	nucleotide_motif	163	171	 40	+	.	Name=IMOCHigher_chr5:95001753-95002315+;Alias=IM_OC_Bif3Higher_TAAT;ID=IMOCHigher-IM_OC_Bif3Higher_TAAT-1-chr5:95001753-95002315;pvalue=9.89e-05;qvalue=0.564;sequence=CAATTATGC;
-chr6:179346792-179347300	fimo	nucleotide_motif	181	189	41.1	+	.	Name=IMOCHigher_chr6:179346792-179347300+;Alias=IM_OC_Bif3Higher_TAAT;ID=IMOCHigher-IM_OC_Bif3Higher_TAAT-1-chr6:179346792-179347300;pvalue=7.69e-05;qvalue=0.564;sequence=CAATAACGC;

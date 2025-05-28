@@ -1,7 +1,7 @@
 Getting FC (Bif3/WT) of gene body chromatin acc
 ================
 Sohyun Bang
-21 May, 2025
+27 May, 2025
 
     ## Loading required package: limma
 
@@ -15,6 +15,10 @@ Sohyun Bang
     ## The following objects are masked from 'package:base':
     ## 
     ##     intersect, setdiff, setequal, union
+
+    ## Loading required package: grid
+
+    ## Loading required package: futile.logger
 
 ### 1) Get Gene body acc for all the genes & normalize the value & calculate logFC
 
@@ -162,6 +166,7 @@ FCTable_with_id <- FCTable %>%
 
 FCTable_annotated <- FCTable_with_id %>%
   left_join(GeneInfo[, c("gene_model", "locus_symbol")], by = "gene_model")
+write.table(FCTable_annotated, file = "GeneBodyACC_FC_Bif3WT_byCelltypes.txt", sep = "\t", row.names = FALSE, quote = FALSE)
 
 #FCTable_annotated[FCTable_annotated$gene_model == "Zm00001eb067310",]
 #FCTable_annotated[FCTable_annotated$gene_model == "Zm00001eb168120",]
@@ -357,14 +362,6 @@ Sig_DeNovo$gene_name
     ## [289] "Zm00001eb401720" "Zm00001eb253260" "Zm00001eb257570" "Zm00001eb048560"
 
 ``` r
-library(VennDiagram)
-```
-
-    ## Loading required package: grid
-
-    ## Loading required package: futile.logger
-
-``` r
 ven_list_all <- list(HD_TF_Up = Up_inCentralZone$gene_model, 
                      Central_Zone_Denovo_markergene = Sig_DeNovo$gene_name)
 #print(ggVennDiagram(ven_list_all, label = "count",nintersects = 20))
@@ -374,9 +371,10 @@ intersect(Up_inCentralZone$gene_model, Sig_DeNovo$gene_name)
     ## [1] "Zm00001eb067310"
 
 ``` r
-venn_plot <- venn.diagram(ven_list_all,
-        category.names = c("Set 1" , "Set 2 "),
-        filename = NULL,
+venn.diagram(ven_list_all,
+        category.names = c("Set 1" , "Set 2"),
+        filename = "VennDiagram_DeNovoCentralZone.pdf",
+        imagetype="tiff" ,
         height = 150 , 
         width = 200 , 
         resolution = 300,
@@ -384,8 +382,9 @@ venn_plot <- venn.diagram(ven_list_all,
         lwd = 2,
         lty = 'blank',
         fill = c("red","blue"))
-grid.newpage()
-grid.draw(venn_plot)
 ```
 
-![](output/fig-check%20De%20novo%20marker%20gene%20list-1.png)<!-- -->
+    ## Warning in tiff(filename = filename, height = height, width = width, units =
+    ## units, : compression is not supported for type = "quartz"
+
+    ## [1] 1
